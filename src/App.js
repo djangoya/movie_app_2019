@@ -2,39 +2,19 @@ import React from 'react';
 import Proptypes from 'prop-types';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log("constructor called");
-  }
-
   state = {
-    count: 0
+    isLoading: true
   }
 
-  add = () => { 
-    this.setState(current => ({count: this.state.count + 1})); 
-  }
-  minus = () => { 
-    this.setState(current => ({count: this.state.count - 1})); 
-  }
-
-  componentDidMout() {
-    console.log('component rendered');
-  }
-
-  componentDidUpdate() {
-    console.log('component updated');
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({isLoading: false})
+    }, 6000);
   }
 
   render() {
-    console.log('I am rendering');
-    return (
-      <div>
-        <h1>The Number is {this.state.count} </h1>
-        <button onClick={this.add}>Add</button>
-        <button onClick={this.minus}>Minus</button>
-      </div>
-    )
+    const {isLoading} = this.state;
+    return <div>{isLoading ? 'Loading...' : "I'm ready"}</div>
   }
 }
 
