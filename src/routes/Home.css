@@ -1,27 +1,10 @@
-* {
-  box-sizing: border-box;
-}
-
-html,
-body,
 .container {
   height: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(202, 223, 215);
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 12px;
-}
-
-.container {
   display: flex;
   justify-content: center;
 }
 
-.container .loader {
+.loader {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -30,10 +13,12 @@ body {
   font-weight: 300;
 }
 
-.container .movies {
-  width: 90%;
-  margin-top: 50px;
+.movies {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 50px;
+  padding-top: 70px;
+  width: 80%;
 }
