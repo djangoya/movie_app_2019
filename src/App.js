@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation";
 
 import "./App.css";
 
+// check=> https://github.com/nomadcoders/movie_app_2019/
 function App() {
   return (
     <HashRouter>
